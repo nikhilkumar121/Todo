@@ -25,7 +25,7 @@ class TodoApplicationTests {
 
 	@Autowired
 	private ObjectMapper objectMapper;
-	
+
 	private static final int TEST_TODO_ID = 1;
 
 //	@Test
@@ -33,18 +33,17 @@ class TodoApplicationTests {
 //	}
 
 	@BeforeEach
-    void setUp() {
-        // Clean up the database before each test
-        todoRepository.deleteById(TEST_TODO_ID);
-    }
+	void setUp() {
+		// Clean up the database before each test
+		todoRepository.deleteById(TEST_TODO_ID);
+	}
 
-    @AfterEach
-    void tearDown() {
-        // Clean up the database after each test
-        todoRepository.deleteById(TEST_TODO_ID);
-    }
+	@AfterEach
+	void tearDown() {
+		// Clean up the database after each test
+		todoRepository.deleteById(TEST_TODO_ID);
+	}
 
-    
 	// Create Todo Task
 	@Test
 	public void createTodo() {
